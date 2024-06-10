@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.fragment.findNavController
 import com.example.navigation.R
 
 
@@ -24,8 +25,9 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val bF1 = view.findViewById<Button>(R.id.buttonF1)
         val bF2 = view.findViewById<Button>(R.id.buttonF2)
-        bF1.setOnClickListener {  }
-        bF2.setOnClickListener {  }
+        val controller = findNavController()
+        bF1.setOnClickListener { controller.navigate(R.id.fragment1) }
+        bF2.setOnClickListener { controller.navigate(R.id.fragment2) }
     }
 
 }
