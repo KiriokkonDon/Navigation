@@ -1,8 +1,10 @@
 package com.example.navigation
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.findNavController
@@ -18,11 +20,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        setupActionBarWithNavController(findNavController(R.id.fragmentContainerView))
+
+        val rootLayout = findViewById<ConstraintLayout>(R.id.main)
+        val animDrawable = rootLayout.background as AnimationDrawable
+        animDrawable.setEnterFadeDuration(10)
+        animDrawable.setExitFadeDuration(5000)
+        animDrawable.start()
+
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val controller = findNavController(R.id.fragmentContainerView)
-        return controller.navigateUp() || super.onSupportNavigateUp()
-    }
+
 }
