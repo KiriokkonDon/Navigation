@@ -16,7 +16,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginBottom="115dp"
         android:background="@drawable/custom_button"
-        android:text="frag 2"
+        android:text="Social Media"
         android:textAllCaps="false"
         android:textColor="#FBFBFB"
         android:textSize="20sp" />
@@ -30,7 +30,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginBottom="180dp"
         android:background="@drawable/custom_button"
-        android:text="frag 1"
+        android:text="BIO"
         android:textAllCaps="false"
         android:textColor="#FBFBFB"
         android:textSize="20sp"
